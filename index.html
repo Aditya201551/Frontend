@@ -13,9 +13,9 @@
     <div class="navbar">
         <div class="container">
             <a class="logo" href="#">Remember<span>That</span></a>
-            <i class="fas fa-bars mobile-menu" id="mobile-cta"></i>
+            <i class="fas fa-bars mobile-menu" id="mobile-cta" style="font-size:2em;"></i>
             <nav>
-                <i class="far fa-times-circle mobile-menu" id="mobile-exit"></i>
+                <i class="far fa-times-circle mobile-menu exit-nav" id="mobile-exit"></i>
                 <ul class="left-nav">
                     <li class="current"><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -107,5 +107,14 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('mobile-cta').addEventListener('click',()=>{
+            document.querySelector('nav').style.display = 'block'
+        })
+        document.getElementById('mobile-exit').addEventListener('click',()=>{
+             document.querySelector('nav').style.display = 'none'
+        })
+    </script>
 </body>
 </html>
